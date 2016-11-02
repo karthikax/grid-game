@@ -1,0 +1,87 @@
+body {
+	font-family: -system,-apple-system,".SFNSDisplay-Regular",sans-serif;
+}
+
+main {
+	width: -moz-fit-content;
+	width: fit-content;
+	margin: auto;
+	margin-top: 20px;
+	position: relative;
+}
+
+ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	max-width: 400px;
+	display: flex;
+	flex-flow: row wrap;
+	border: 1px solid #000;
+}
+
+li{
+	padding: 0;
+	margin: 0;
+	width: 100px;
+	height: 100px;
+	position: relative;
+	border: 1px solid #000;
+	box-sizing: border-box;
+	overflow: hidden;
+}
+
+.card {
+	height: 100%;
+}
+
+.overlay {
+	background: #fff;
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	transform: translateY(0);
+	transition: all .1s;
+}
+
+.overlay.open {
+	transform: translateY(100%);
+}
+
+.result {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: rgba(0,0,0,.5);
+	display: flex;
+}
+
+.message {
+	width: 60%;
+	margin: auto;
+	padding: 20px;
+	box-sizing: border-box;
+	min-height: 100px;
+	background: #fff;
+	border-radius: 5px;
+	box-shadow: 0 0 20px;
+	text-align: center;
+}
+
+button {
+	background: #353f58;
+	color: #fff;
+	outline: none;
+	border: none;
+	padding: 10px 20px;
+	border-radius: 5px;
+}
+
+.desc {
+	padding-top: 20px;
+	text-align: center;
+}

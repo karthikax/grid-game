@@ -6,8 +6,23 @@
 		<script type="text/javascript" src="angular.min.js"></script>
 		<script type="text/javascript" src="app.js"></script>
 	</head>
-	<body>
+	<body ng-app="grid" ng-controller="mainController">
 		<main>
+			<ul>
+				<li ng-repeat="card in cards" class="cell" ng-click="click(card)">
+					<div class="card" ng-class="card.color" style="background: {{card.color}}"></div>
+					<div class="overlay" ng-class="{open: card.open}"></div>
+				</li>
+			</ul>
+			<div class="result" ng-show="message">
+				<div class="message">
+					<p>{{message}}<br>{{score}}</p>
+					<button ng-click="restart()">{{buttonText}}</button>
+				</div>
+			</div>
 		</main>
+		<div class="desc">
+			Time left: {{timeLimit}} sec
+		</div>
 	</body>
 </html>
